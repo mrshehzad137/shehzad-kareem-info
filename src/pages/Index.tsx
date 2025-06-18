@@ -259,14 +259,57 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Featured Projects</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { name: 'Octonius', url: 'https://octonius.com/', desc: 'Sophisticated CRM & Workforce Management', revenue: '$5M Revenue' },
-              { name: 'Chowmill', url: 'https://chowmill.com/', desc: 'Fresh Food Delivery Platform', revenue: '$1.2M Revenue' },
-              { name: 'OrderMadeSimple', url: 'https://ordersmadesimple.com/', desc: 'Order & Supplier Management', users: '400+ Suppliers' },
-              { name: 'VAAMSport', url: 'https://vaamsport.com/en', desc: 'Sustainable Sportswear Brand', tech: 'Serverless Architecture' },
-              { name: 'Tournated', url: 'https://www.tournated.com/', desc: 'Tournament Management Platform', feature: 'Real-time Updates' },
-              { name: 'Centraleyes', url: 'https://www.centraleyes.com/', desc: 'Risk Management Solution', feature: 'Enterprise Grade' }
+              { 
+                name: 'Octonius', 
+                url: 'https://octonius.com/', 
+                desc: 'Sophisticated CRM & Workforce Management', 
+                revenue: '$5M Revenue',
+                image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=200&fit=crop'
+              },
+              { 
+                name: 'Chowmill', 
+                url: 'https://chowmill.com/', 
+                desc: 'Fresh Food Delivery Platform', 
+                revenue: '$1.2M Revenue',
+                image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=200&fit=crop'
+              },
+              { 
+                name: 'OrderMadeSimple', 
+                url: 'https://ordersmadesimple.com/', 
+                desc: 'Order & Supplier Management', 
+                users: '400+ Suppliers',
+                image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=200&fit=crop'
+              },
+              { 
+                name: 'VAAMSport', 
+                url: 'https://vaamsport.com/en', 
+                desc: 'Sustainable Sportswear Brand', 
+                tech: 'Serverless Architecture',
+                image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=200&fit=crop'
+              },
+              { 
+                name: 'Tournated', 
+                url: 'https://www.tournated.com/', 
+                desc: 'Tournament Management Platform', 
+                feature: 'Real-time Updates',
+                image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=200&fit=crop'
+              },
+              { 
+                name: 'Centraleyes', 
+                url: 'https://www.centraleyes.com/', 
+                desc: 'Risk Management Solution', 
+                feature: 'Enterprise Grade',
+                image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=200&fit=crop'
+              }
             ].map((project, index) => (
-              <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-blue-500/50 transition-colors group">
+              <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-blue-500/50 transition-colors group overflow-hidden">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-blue-400 transition-colors">{project.name}</h3>
                   <p className="text-slate-300 mb-4">{project.desc}</p>
