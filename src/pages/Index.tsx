@@ -37,13 +37,13 @@ const Index = () => {
               6+ Years of Experience • Led teams to deliver sophisticated SaaS solutions • Expert in scalable microservices & cloud architecture
             </p>
             <div className="flex justify-center space-x-4 mb-12">
-              <Button className="bg-blue-600 hover:bg-blue-700">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                 <Github className="w-5 h-5 mr-2" />
                 GitHub
               </Button>
               <Button 
                 variant="outline" 
-                className="border-slate-600 text-white hover:bg-slate-800"
+                className="border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white"
                 onClick={() => window.open('https://www.linkedin.com/in/mrshehzad137/', '_blank')}
               >
                 <Linkedin className="w-5 h-5 mr-2" />
@@ -51,7 +51,7 @@ const Index = () => {
               </Button>
               <Button 
                 variant="outline" 
-                className="border-slate-600 text-white hover:bg-slate-800"
+                className="border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white"
                 onClick={() => window.open('mailto:mr.shehzad.137@gmail.com', '_blank')}
               >
                 <Mail className="w-5 h-5 mr-2" />
@@ -288,20 +288,24 @@ const Index = () => {
           <div className="flex justify-center space-x-6">
             <Button 
               size="lg" 
-              className="bg-blue-600 hover:bg-blue-700"
+              className="bg-blue-600 hover:bg-blue-700 text-white"
               onClick={() => window.open('mailto:mr.shehzad.137@gmail.com', '_blank')}
             >
               <Mail className="w-5 h-5 mr-2" />
               Get In Touch
             </Button>
-            <Button size="lg" variant="outline" className="border-slate-600 text-white hover:bg-slate-800">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white"
+            >
               <Github className="w-5 h-5 mr-2" />
               View GitHub
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-slate-600 text-white hover:bg-slate-800"
+              className="border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white"
               onClick={() => window.open('https://www.linkedin.com/in/mrshehzad137/', '_blank')}
             >
               <Linkedin className="w-5 h-5 mr-2" />
