@@ -41,11 +41,19 @@ const Index = () => {
                 <Github className="w-5 h-5 mr-2" />
                 GitHub
               </Button>
-              <Button variant="outline" className="border-slate-600 text-white hover:bg-slate-800">
+              <Button 
+                variant="outline" 
+                className="border-slate-600 text-white hover:bg-slate-800"
+                onClick={() => window.open('https://www.linkedin.com/in/mrshehzad137/', '_blank')}
+              >
                 <Linkedin className="w-5 h-5 mr-2" />
                 LinkedIn
               </Button>
-              <Button variant="outline" className="border-slate-600 text-white hover:bg-slate-800">
+              <Button 
+                variant="outline" 
+                className="border-slate-600 text-white hover:bg-slate-800"
+                onClick={() => window.open('mailto:mr.shehzad.137@gmail.com', '_blank')}
+              >
                 <Mail className="w-5 h-5 mr-2" />
                 Contact
               </Button>
@@ -278,7 +286,11 @@ const Index = () => {
             Ready to bring your ideas to life with scalable, high-performance solutions
           </p>
           <div className="flex justify-center space-x-6">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+            <Button 
+              size="lg" 
+              className="bg-blue-600 hover:bg-blue-700"
+              onClick={() => window.open('mailto:mr.shehzad.137@gmail.com', '_blank')}
+            >
               <Mail className="w-5 h-5 mr-2" />
               Get In Touch
             </Button>
@@ -286,7 +298,12 @@ const Index = () => {
               <Github className="w-5 h-5 mr-2" />
               View GitHub
             </Button>
-            <Button size="lg" variant="outline" className="border-slate-600 text-white hover:bg-slate-800">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-slate-600 text-white hover:bg-slate-800"
+              onClick={() => window.open('https://www.linkedin.com/in/mrshehzad137/', '_blank')}
+            >
               <Linkedin className="w-5 h-5 mr-2" />
               LinkedIn
             </Button>
