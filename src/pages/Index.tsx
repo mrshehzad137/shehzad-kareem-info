@@ -3,6 +3,7 @@ import React from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Calendar, MapPin, Building, Users, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Index = () => {
   return (
@@ -27,6 +28,12 @@ const Index = () => {
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center">
+            <div className="mb-8">
+              <Avatar className="w-32 h-32 mx-auto mb-6 border-4 border-blue-400">
+                <AvatarImage src="/lovable-uploads/65d09810-82e9-4d6a-bd9e-eb086762a403.png" alt="Shehzad Kareem" />
+                <AvatarFallback className="text-2xl font-bold bg-blue-600 text-white">SK</AvatarFallback>
+              </Avatar>
+            </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               SHEHZAD KAREEM
             </h1>
