@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Calendar, MapPin, Building, Users, TrendingUp, Database, Code, Terminal, Server, Globe, Zap, Layers, Monitor, Cpu, Cloud, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -10,7 +11,7 @@ const Index = () => {
       {/* Enhanced Moving Background Icons */}
       <div className="fixed inset-0 pointer-events-none z-0">
         {/* Custom CSS for random floating animations */}
-        <style jsx>{`
+        <style>{`
           @keyframes float1 {
             0% { transform: translate(0, 100vh) rotate(0deg); opacity: 0; }
             10% { opacity: 0.3; }
