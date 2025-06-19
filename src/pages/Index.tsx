@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Calendar, MapPin, Building, Users, TrendingUp, Database, Code, Terminal } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Calendar, MapPin, Building, Users, TrendingUp, Database, Code, Terminal, Server, Globe, Zap, Layers, Monitor, Cpu, Cloud, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
@@ -7,8 +8,9 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white relative overflow-hidden">
-      {/* Animated Background Icons */}
+      {/* Enhanced Animated Background Icons */}
       <div className="fixed inset-0 pointer-events-none z-0">
+        {/* Original icons */}
         <div className="absolute top-20 left-10 animate-bounce">
           <Code className="w-8 h-8 text-blue-400/20" />
         </div>
@@ -26,6 +28,60 @@ const Index = () => {
         </div>
         <div className="absolute top-80 right-1/3 animate-pulse delay-300">
           <Terminal className="w-7 h-7 text-green-400/15" />
+        </div>
+
+        {/* New floating technology icons */}
+        {/* React-like component icon */}
+        <div className="absolute top-32 left-1/4 animate-bounce delay-200">
+          <Layers className="w-9 h-9 text-cyan-400/25" />
+        </div>
+        
+        {/* Node.js-like server icon */}
+        <div className="absolute top-72 right-1/4 animate-pulse delay-800">
+          <Server className="w-8 h-8 text-emerald-400/20" />
+        </div>
+        
+        {/* TypeScript-like structured code */}
+        <div className="absolute bottom-32 left-1/3 animate-bounce delay-400">
+          <Monitor className="w-10 h-10 text-blue-500/20" />
+        </div>
+        
+        {/* JavaScript-like dynamic icon */}
+        <div className="absolute top-44 left-3/4 animate-pulse delay-600">
+          <Zap className="w-7 h-7 text-yellow-400/25" />
+        </div>
+        
+        {/* Express-like network/globe */}
+        <div className="absolute bottom-48 right-1/3 animate-bounce delay-900">
+          <Globe className="w-8 h-8 text-indigo-400/20" />
+        </div>
+        
+        {/* Additional processing/CPU icons */}
+        <div className="absolute top-96 left-16 animate-pulse delay-1100">
+          <Cpu className="w-6 h-6 text-orange-400/20" />
+        </div>
+        
+        {/* Cloud/serverless icons */}
+        <div className="absolute bottom-72 left-2/3 animate-bounce delay-1300">
+          <Cloud className="w-9 h-9 text-sky-400/15" />
+        </div>
+        
+        {/* Settings/configuration icons */}
+        <div className="absolute top-56 right-12 animate-pulse delay-1500">
+          <Settings className="w-8 h-8 text-gray-400/20" />
+        </div>
+        
+        {/* More distributed icons */}
+        <div className="absolute bottom-24 left-1/2 animate-bounce delay-1700">
+          <Server className="w-7 h-7 text-emerald-400/15" />
+        </div>
+        
+        <div className="absolute top-28 right-2/3 animate-pulse delay-1900">
+          <Code className="w-6 h-6 text-blue-300/20" />
+        </div>
+        
+        <div className="absolute bottom-56 right-20 animate-bounce delay-2100">
+          <Layers className="w-8 h-8 text-cyan-400/15" />
         </div>
       </div>
 
@@ -247,8 +303,24 @@ const Index = () => {
                   <h3 className="text-xl font-semibold text-blue-400">Backend & DevOps</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {['Node.js', 'TypeScript', 'Express.js', 'Nest.js', 'PostgreSQL', 'MongoDB', 'Redis', 'Docker', 'Kubernetes', 'AWS Lambda', 'API Gateway', 'DynamoDB'].map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-slate-700 rounded-full text-sm text-slate-300 hover:bg-slate-600 transition-colors">{tech}</span>
+                  {[
+                    { name: 'Node.js', icon: <Server className="w-4 h-4" /> },
+                    { name: 'TypeScript', icon: <Code className="w-4 h-4" /> },
+                    { name: 'Express.js', icon: <Globe className="w-4 h-4" /> },
+                    { name: 'Nest.js', icon: <Layers className="w-4 h-4" /> },
+                    { name: 'PostgreSQL', icon: <Database className="w-4 h-4" /> },
+                    { name: 'MongoDB', icon: <Database className="w-4 h-4" /> },
+                    { name: 'Redis', icon: <Zap className="w-4 h-4" /> },
+                    { name: 'Docker', icon: <Settings className="w-4 h-4" /> },
+                    { name: 'Kubernetes', icon: <Cloud className="w-4 h-4" /> },
+                    { name: 'AWS Lambda', icon: <Cloud className="w-4 h-4" /> },
+                    { name: 'API Gateway', icon: <Globe className="w-4 h-4" /> },
+                    { name: 'DynamoDB', icon: <Database className="w-4 h-4" /> }
+                  ].map((tech) => (
+                    <span key={tech.name} className="px-3 py-1 bg-slate-700 rounded-full text-sm text-slate-300 hover:bg-slate-600 transition-colors flex items-center gap-1">
+                      {tech.icon}
+                      {tech.name}
+                    </span>
                   ))}
                 </div>
               </CardContent>
@@ -260,8 +332,22 @@ const Index = () => {
                   <h3 className="text-xl font-semibold text-purple-400">Frontend</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {['React.js', 'Next.js', 'Vue.js', 'Redux', 'TypeScript', 'TailwindCSS', 'Material UI', 'Angular.js', 'HTML5', 'CSS/SCSS'].map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-slate-700 rounded-full text-sm text-slate-300 hover:bg-slate-600 transition-colors">{tech}</span>
+                  {[
+                    { name: 'React.js', icon: <Layers className="w-4 h-4" /> },
+                    { name: 'Next.js', icon: <Monitor className="w-4 h-4" /> },
+                    { name: 'Vue.js', icon: <Layers className="w-4 h-4" /> },
+                    { name: 'Redux', icon: <Settings className="w-4 h-4" /> },
+                    { name: 'TypeScript', icon: <Code className="w-4 h-4" /> },
+                    { name: 'TailwindCSS', icon: <Layers className="w-4 h-4" /> },
+                    { name: 'Material UI', icon: <Layers className="w-4 h-4" /> },
+                    { name: 'Angular.js', icon: <Layers className="w-4 h-4" /> },
+                    { name: 'HTML5', icon: <Code className="w-4 h-4" /> },
+                    { name: 'CSS/SCSS', icon: <Code className="w-4 h-4" /> }
+                  ].map((tech) => (
+                    <span key={tech.name} className="px-3 py-1 bg-slate-700 rounded-full text-sm text-slate-300 hover:bg-slate-600 transition-colors flex items-center gap-1">
+                      {tech.icon}
+                      {tech.name}
+                    </span>
                   ))}
                 </div>
               </CardContent>
@@ -273,8 +359,24 @@ const Index = () => {
                   <h3 className="text-xl font-semibold text-green-400">AWS & Cloud</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {['EC2', 'Lambda', 'S3', 'RDS', 'DynamoDB', 'CloudFront', 'Route 53', 'VPC', 'IAM', 'CloudWatch', 'SNS', 'SQS'].map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-slate-700 rounded-full text-sm text-slate-300 hover:bg-slate-600 transition-colors">{tech}</span>
+                  {[
+                    { name: 'EC2', icon: <Server className="w-4 h-4" /> },
+                    { name: 'Lambda', icon: <Cloud className="w-4 h-4" /> },
+                    { name: 'S3', icon: <Database className="w-4 h-4" /> },
+                    { name: 'RDS', icon: <Database className="w-4 h-4" /> },
+                    { name: 'DynamoDB', icon: <Database className="w-4 h-4" /> },
+                    { name: 'CloudFront', icon: <Globe className="w-4 h-4" /> },
+                    { name: 'Route 53', icon: <Globe className="w-4 h-4" /> },
+                    { name: 'VPC', icon: <Settings className="w-4 h-4" /> },
+                    { name: 'IAM', icon: <Settings className="w-4 h-4" /> },
+                    { name: 'CloudWatch', icon: <Monitor className="w-4 h-4" /> },
+                    { name: 'SNS', icon: <Globe className="w-4 h-4" /> },
+                    { name: 'SQS', icon: <Globe className="w-4 h-4" /> }
+                  ].map((tech) => (
+                    <span key={tech.name} className="px-3 py-1 bg-slate-700 rounded-full text-sm text-slate-300 hover:bg-slate-600 transition-colors flex items-center gap-1">
+                      {tech.icon}
+                      {tech.name}
+                    </span>
                   ))}
                 </div>
               </CardContent>
