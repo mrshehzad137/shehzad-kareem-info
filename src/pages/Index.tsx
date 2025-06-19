@@ -1,13 +1,34 @@
-
 import React from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Calendar, MapPin, Building, Users, TrendingUp } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Calendar, MapPin, Building, Users, TrendingUp, Database, Code, Terminal } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white relative overflow-hidden">
+      {/* Animated Background Icons */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute top-20 left-10 animate-bounce">
+          <Code className="w-8 h-8 text-blue-400/20" />
+        </div>
+        <div className="absolute top-40 right-20 animate-pulse">
+          <Database className="w-10 h-10 text-purple-400/20" />
+        </div>
+        <div className="absolute bottom-40 left-20 animate-bounce delay-1000">
+          <Terminal className="w-6 h-6 text-green-400/20" />
+        </div>
+        <div className="absolute top-60 left-1/2 animate-pulse delay-500">
+          <Code className="w-12 h-12 text-blue-400/15" />
+        </div>
+        <div className="absolute bottom-60 right-10 animate-bounce delay-700">
+          <Database className="w-8 h-8 text-purple-400/20" />
+        </div>
+        <div className="absolute top-80 right-1/3 animate-pulse delay-300">
+          <Terminal className="w-7 h-7 text-green-400/15" />
+        </div>
+      </div>
+
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/50">
         <div className="max-w-6xl mx-auto px-6 py-4">
@@ -25,7 +46,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
+      <section className="pt-32 pb-20 px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center">
             <div className="mb-8">
@@ -70,7 +91,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-6">
+      <section id="about" className="py-20 px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">About Me</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -100,7 +121,7 @@ const Index = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 px-6 bg-slate-900/50">
+      <section id="experience" className="py-20 px-6 bg-slate-900/50 relative z-10">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Professional Experience</h2>
           <div className="space-y-12">
@@ -215,36 +236,45 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-6">
+      <section id="skills" className="py-20 px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Technical Skills</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="bg-slate-800/50 border-slate-700">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">Backend & DevOps</h3>
+                <div className="flex items-center mb-4">
+                  <Database className="w-6 h-6 text-blue-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-blue-400">Backend & DevOps</h3>
+                </div>
                 <div className="flex flex-wrap gap-2">
                   {['Node.js', 'TypeScript', 'Express.js', 'Nest.js', 'PostgreSQL', 'MongoDB', 'Redis', 'Docker', 'Kubernetes', 'AWS Lambda', 'API Gateway', 'DynamoDB'].map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-slate-700 rounded-full text-sm text-slate-300">{tech}</span>
+                    <span key={tech} className="px-3 py-1 bg-slate-700 rounded-full text-sm text-slate-300 hover:bg-slate-600 transition-colors">{tech}</span>
                   ))}
                 </div>
               </CardContent>
             </Card>
             <Card className="bg-slate-800/50 border-slate-700">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4 text-purple-400">Frontend</h3>
+                <div className="flex items-center mb-4">
+                  <Code className="w-6 h-6 text-purple-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-purple-400">Frontend</h3>
+                </div>
                 <div className="flex flex-wrap gap-2">
                   {['React.js', 'Next.js', 'Vue.js', 'Redux', 'TypeScript', 'TailwindCSS', 'Material UI', 'Angular.js', 'HTML5', 'CSS/SCSS'].map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-slate-700 rounded-full text-sm text-slate-300">{tech}</span>
+                    <span key={tech} className="px-3 py-1 bg-slate-700 rounded-full text-sm text-slate-300 hover:bg-slate-600 transition-colors">{tech}</span>
                   ))}
                 </div>
               </CardContent>
             </Card>
             <Card className="bg-slate-800/50 border-slate-700">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4 text-green-400">AWS & Cloud</h3>
+                <div className="flex items-center mb-4">
+                  <Terminal className="w-6 h-6 text-green-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-green-400">AWS & Cloud</h3>
+                </div>
                 <div className="flex flex-wrap gap-2">
                   {['EC2', 'Lambda', 'S3', 'RDS', 'DynamoDB', 'CloudFront', 'Route 53', 'VPC', 'IAM', 'CloudWatch', 'SNS', 'SQS'].map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-slate-700 rounded-full text-sm text-slate-300">{tech}</span>
+                    <span key={tech} className="px-3 py-1 bg-slate-700 rounded-full text-sm text-slate-300 hover:bg-slate-600 transition-colors">{tech}</span>
                   ))}
                 </div>
               </CardContent>
@@ -254,7 +284,7 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6 bg-slate-900/50">
+      <section id="projects" className="py-20 px-6 bg-slate-900/50 relative z-10">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Featured Projects</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -329,7 +359,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6">
+      <section id="contact" className="py-20 px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Let's Work Together</h2>
           <p className="text-xl text-slate-300 mb-12">
@@ -366,7 +396,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-slate-700">
+      <footer className="py-8 px-6 border-t border-slate-700 relative z-10">
         <div className="max-w-6xl mx-auto text-center text-slate-400">
           <p>&copy; 2024 Shehzad Kareem. Full Stack Developer | DevOps Engineer | AWS Expert</p>
           <p className="mt-2">Bachelor's in Software Engineering • COMSATS Institute of Information Technology</p>
