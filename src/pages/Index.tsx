@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Calendar, MapPin, Building, Users, TrendingUp, Database, Code, Terminal, Server, Globe, Zap, Layers, Monitor, Cpu, Cloud, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -8,80 +7,156 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white relative overflow-hidden">
-      {/* Enhanced Animated Background Icons */}
+      {/* Enhanced Moving Background Icons */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        {/* Original icons */}
-        <div className="absolute top-20 left-10 animate-bounce">
-          <Code className="w-8 h-8 text-blue-400/20" />
+        {/* Custom CSS for random floating animations */}
+        <style jsx>{`
+          @keyframes float1 {
+            0% { transform: translate(0, 100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.1; }
+            100% { transform: translate(-20vw, -20vh) rotate(360deg); opacity: 0; }
+          }
+          
+          @keyframes float2 {
+            0% { transform: translate(100vw, 100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.25; }
+            90% { opacity: 0.15; }
+            100% { transform: translate(-30vw, -10vh) rotate(-360deg); opacity: 0; }
+          }
+          
+          @keyframes float3 {
+            0% { transform: translate(-10vw, 100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.2; }
+            90% { opacity: 0.1; }
+            100% { transform: translate(110vw, -30vh) rotate(180deg); opacity: 0; }
+          }
+          
+          @keyframes float4 {
+            0% { transform: translate(50vw, 100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.15; }
+            100% { transform: translate(20vw, -40vh) rotate(-180deg); opacity: 0; }
+          }
+          
+          @keyframes float5 {
+            0% { transform: translate(100vw, 50vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.25; }
+            90% { opacity: 0.1; }
+            100% { transform: translate(-20vw, 10vh) rotate(270deg); opacity: 0; }
+          }
+          
+          @keyframes float6 {
+            0% { transform: translate(-20vw, 0vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.2; }
+            90% { opacity: 0.15; }
+            100% { transform: translate(120vw, 80vh) rotate(-270deg); opacity: 0; }
+          }
+
+          .floating-icon-1 { animation: float1 25s linear infinite; }
+          .floating-icon-2 { animation: float2 30s linear infinite; }
+          .floating-icon-3 { animation: float3 35s linear infinite; }
+          .floating-icon-4 { animation: float4 28s linear infinite; }
+          .floating-icon-5 { animation: float5 32s linear infinite; }
+          .floating-icon-6 { animation: float6 27s linear infinite; }
+        `}</style>
+
+        {/* React Icons */}
+        <div className="absolute floating-icon-1" style={{ animationDelay: '0s' }}>
+          <Layers className="w-12 h-12 text-cyan-400/30" />
         </div>
-        <div className="absolute top-40 right-20 animate-pulse">
-          <Database className="w-10 h-10 text-purple-400/20" />
+        <div className="absolute floating-icon-2" style={{ animationDelay: '5s' }}>
+          <Layers className="w-8 h-8 text-cyan-400/20" />
         </div>
-        <div className="absolute bottom-40 left-20 animate-bounce delay-1000">
-          <Terminal className="w-6 h-6 text-green-400/20" />
-        </div>
-        <div className="absolute top-60 left-1/2 animate-pulse delay-500">
-          <Code className="w-12 h-12 text-blue-400/15" />
-        </div>
-        <div className="absolute bottom-60 right-10 animate-bounce delay-700">
-          <Database className="w-8 h-8 text-purple-400/20" />
-        </div>
-        <div className="absolute top-80 right-1/3 animate-pulse delay-300">
-          <Terminal className="w-7 h-7 text-green-400/15" />
+        <div className="absolute floating-icon-3" style={{ animationDelay: '12s' }}>
+          <Layers className="w-10 h-10 text-cyan-400/25" />
         </div>
 
-        {/* New floating technology icons */}
-        {/* React-like component icon */}
-        <div className="absolute top-32 left-1/4 animate-bounce delay-200">
-          <Layers className="w-9 h-9 text-cyan-400/25" />
+        {/* Node.js / Server Icons */}
+        <div className="absolute floating-icon-4" style={{ animationDelay: '2s' }}>
+          <Server className="w-11 h-11 text-emerald-400/25" />
         </div>
-        
-        {/* Node.js-like server icon */}
-        <div className="absolute top-72 right-1/4 animate-pulse delay-800">
-          <Server className="w-8 h-8 text-emerald-400/20" />
+        <div className="absolute floating-icon-1" style={{ animationDelay: '8s' }}>
+          <Server className="w-9 h-9 text-emerald-400/20" />
         </div>
-        
-        {/* TypeScript-like structured code */}
-        <div className="absolute bottom-32 left-1/3 animate-bounce delay-400">
-          <Monitor className="w-10 h-10 text-blue-500/20" />
+        <div className="absolute floating-icon-5" style={{ animationDelay: '15s' }}>
+          <Server className="w-7 h-7 text-emerald-400/30" />
         </div>
-        
-        {/* JavaScript-like dynamic icon */}
-        <div className="absolute top-44 left-3/4 animate-pulse delay-600">
-          <Zap className="w-7 h-7 text-yellow-400/25" />
+
+        {/* TypeScript / Code Icons */}
+        <div className="absolute floating-icon-6" style={{ animationDelay: '3s' }}>
+          <Code className="w-10 h-10 text-blue-400/25" />
         </div>
-        
-        {/* Express-like network/globe */}
-        <div className="absolute bottom-48 right-1/3 animate-bounce delay-900">
-          <Globe className="w-8 h-8 text-indigo-400/20" />
+        <div className="absolute floating-icon-3" style={{ animationDelay: '9s' }}>
+          <Code className="w-8 h-8 text-blue-400/20" />
         </div>
-        
-        {/* Additional processing/CPU icons */}
-        <div className="absolute top-96 left-16 animate-pulse delay-1100">
-          <Cpu className="w-6 h-6 text-orange-400/20" />
+        <div className="absolute floating-icon-2" style={{ animationDelay: '16s' }}>
+          <Code className="w-12 h-12 text-blue-400/30" />
         </div>
-        
-        {/* Cloud/serverless icons */}
-        <div className="absolute bottom-72 left-2/3 animate-bounce delay-1300">
-          <Cloud className="w-9 h-9 text-sky-400/15" />
+
+        {/* JavaScript / Zap Icons */}
+        <div className="absolute floating-icon-5" style={{ animationDelay: '4s' }}>
+          <Zap className="w-9 h-9 text-yellow-400/25" />
         </div>
-        
-        {/* Settings/configuration icons */}
-        <div className="absolute top-56 right-12 animate-pulse delay-1500">
-          <Settings className="w-8 h-8 text-gray-400/20" />
+        <div className="absolute floating-icon-1" style={{ animationDelay: '11s' }}>
+          <Zap className="w-7 h-7 text-yellow-400/30" />
         </div>
-        
-        {/* More distributed icons */}
-        <div className="absolute bottom-24 left-1/2 animate-bounce delay-1700">
-          <Server className="w-7 h-7 text-emerald-400/15" />
+        <div className="absolute floating-icon-4" style={{ animationDelay: '18s' }}>
+          <Zap className="w-11 h-11 text-yellow-400/20" />
         </div>
-        
-        <div className="absolute top-28 right-2/3 animate-pulse delay-1900">
-          <Code className="w-6 h-6 text-blue-300/20" />
+
+        {/* Express / Globe Icons */}
+        <div className="absolute floating-icon-2" style={{ animationDelay: '6s' }}>
+          <Globe className="w-8 h-8 text-indigo-400/25" />
         </div>
-        
-        <div className="absolute bottom-56 right-20 animate-bounce delay-2100">
-          <Layers className="w-8 h-8 text-cyan-400/15" />
+        <div className="absolute floating-icon-6" style={{ animationDelay: '13s' }}>
+          <Globe className="w-10 h-10 text-indigo-400/20" />
+        </div>
+        <div className="absolute floating-icon-3" style={{ animationDelay: '19s' }}>
+          <Globe className="w-9 h-9 text-indigo-400/30" />
+        </div>
+
+        {/* Database Icons */}
+        <div className="absolute floating-icon-4" style={{ animationDelay: '7s' }}>
+          <Database className="w-11 h-11 text-purple-400/25" />
+        </div>
+        <div className="absolute floating-icon-1" style={{ animationDelay: '14s' }}>
+          <Database className="w-8 h-8 text-purple-400/20" />
+        </div>
+        <div className="absolute floating-icon-5" style={{ animationDelay: '20s' }}>
+          <Database className="w-10 h-10 text-purple-400/30" />
+        </div>
+
+        {/* Terminal Icons */}
+        <div className="absolute floating-icon-6" style={{ animationDelay: '1s' }}>
+          <Terminal className="w-9 h-9 text-green-400/25" />
+        </div>
+        <div className="absolute floating-icon-2" style={{ animationDelay: '10s' }}>
+          <Terminal className="w-7 h-7 text-green-400/30" />
+        </div>
+        <div className="absolute floating-icon-4" style={{ animationDelay: '17s' }}>
+          <Terminal className="w-11 h-11 text-green-400/20" />
+        </div>
+
+        {/* Cloud Icons */}
+        <div className="absolute floating-icon-3" style={{ animationDelay: '21s' }}>
+          <Cloud className="w-10 h-10 text-sky-400/25" />
+        </div>
+        <div className="absolute floating-icon-5" style={{ animationDelay: '23s' }}>
+          <Cloud className="w-8 h-8 text-sky-400/20" />
+        </div>
+
+        {/* Monitor/CPU Icons */}
+        <div className="absolute floating-icon-1" style={{ animationDelay: '22s' }}>
+          <Monitor className="w-9 h-9 text-orange-400/25" />
+        </div>
+        <div className="absolute floating-icon-6" style={{ animationDelay: '24s' }}>
+          <Cpu className="w-8 h-8 text-red-400/20" />
+        </div>
+
+        {/* Settings Icons */}
+        <div className="absolute floating-icon-2" style={{ animationDelay: '25s' }}>
+          <Settings className="w-7 h-7 text-gray-400/25" />
         </div>
       </div>
 
