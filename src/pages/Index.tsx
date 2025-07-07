@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Calendar, MapPin, Building, Users, TrendingUp, Database, Code, Terminal, Server, Globe, Zap, Layers, Monitor, Cpu, Cloud, Settings } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Calendar, MapPin, Building, Users, TrendingUp, Database, Code, Terminal, Server, Globe, Zap, Layers, Monitor, Cpu, Cloud, Settings, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
@@ -196,7 +196,19 @@ const Index = () => {
             <p className="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
               6+ Years of Experience • Led teams to deliver sophisticated SaaS solutions • Expert in scalable microservices & cloud architecture
             </p>
-            <div className="flex justify-center space-x-4 mb-12">
+            <div className="flex justify-center space-x-4 mb-12 flex-wrap gap-4">
+              <Button 
+                className="bg-green-600 hover:bg-green-700 text-white"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/cv.pdf';
+                  link.download = 'Shehzad_Kareem_CV.pdf';
+                  link.click();
+                }}
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Download CV
+              </Button>
               <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                 <Github className="w-5 h-5 mr-2" />
                 GitHub
