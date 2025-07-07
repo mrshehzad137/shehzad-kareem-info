@@ -14,43 +14,43 @@ const Index = () => {
         <style>{`
           @keyframes float1 {
             0% { transform: translate(0, 100vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.3; }
-            90% { opacity: 0.1; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.4; }
             100% { transform: translate(-20vw, -20vh) rotate(360deg); opacity: 0; }
           }
           
           @keyframes float2 {
             0% { transform: translate(100vw, 100vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.25; }
-            90% { opacity: 0.15; }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.3; }
             100% { transform: translate(-30vw, -10vh) rotate(-360deg); opacity: 0; }
           }
           
           @keyframes float3 {
             0% { transform: translate(-10vw, 100vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.2; }
-            90% { opacity: 0.1; }
+            10% { opacity: 0.4; }
+            90% { opacity: 0.2; }
             100% { transform: translate(110vw, -30vh) rotate(180deg); opacity: 0; }
           }
           
           @keyframes float4 {
             0% { transform: translate(50vw, 100vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.3; }
-            90% { opacity: 0.15; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.3; }
             100% { transform: translate(20vw, -40vh) rotate(-180deg); opacity: 0; }
           }
           
           @keyframes float5 {
             0% { transform: translate(100vw, 50vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.25; }
-            90% { opacity: 0.1; }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.2; }
             100% { transform: translate(-20vw, 10vh) rotate(270deg); opacity: 0; }
           }
           
           @keyframes float6 {
             0% { transform: translate(-20vw, 0vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.2; }
-            90% { opacity: 0.15; }
+            10% { opacity: 0.4; }
+            90% { opacity: 0.3; }
             100% { transform: translate(120vw, 80vh) rotate(-270deg); opacity: 0; }
           }
 
@@ -64,100 +64,100 @@ const Index = () => {
 
         {/* React Icons */}
         <div className="absolute floating-icon-1" style={{ animationDelay: '0s' }}>
-          <Layers className="w-12 h-12 text-cyan-400/30" />
+          <Layers className="w-12 h-12 text-cyan-400/60" />
         </div>
         <div className="absolute floating-icon-2" style={{ animationDelay: '5s' }}>
-          <Layers className="w-8 h-8 text-cyan-400/20" />
+          <Layers className="w-8 h-8 text-cyan-400/50" />
         </div>
         <div className="absolute floating-icon-3" style={{ animationDelay: '12s' }}>
-          <Layers className="w-10 h-10 text-cyan-400/25" />
+          <Layers className="w-10 h-10 text-cyan-400/45" />
         </div>
 
         {/* Node.js / Server Icons */}
         <div className="absolute floating-icon-4" style={{ animationDelay: '2s' }}>
-          <Server className="w-11 h-11 text-emerald-400/25" />
+          <Server className="w-11 h-11 text-emerald-400/55" />
         </div>
         <div className="absolute floating-icon-1" style={{ animationDelay: '8s' }}>
-          <Server className="w-9 h-9 text-emerald-400/20" />
+          <Server className="w-9 h-9 text-emerald-400/40" />
         </div>
         <div className="absolute floating-icon-5" style={{ animationDelay: '15s' }}>
-          <Server className="w-7 h-7 text-emerald-400/30" />
+          <Server className="w-7 h-7 text-emerald-400/60" />
         </div>
 
         {/* TypeScript / Code Icons */}
         <div className="absolute floating-icon-6" style={{ animationDelay: '3s' }}>
-          <Code className="w-10 h-10 text-blue-400/25" />
+          <Code className="w-10 h-10 text-blue-400/50" />
         </div>
         <div className="absolute floating-icon-3" style={{ animationDelay: '9s' }}>
-          <Code className="w-8 h-8 text-blue-400/20" />
+          <Code className="w-8 h-8 text-blue-400/40" />
         </div>
         <div className="absolute floating-icon-2" style={{ animationDelay: '16s' }}>
-          <Code className="w-12 h-12 text-blue-400/30" />
+          <Code className="w-12 h-12 text-blue-400/60" />
         </div>
 
         {/* JavaScript / Zap Icons */}
         <div className="absolute floating-icon-5" style={{ animationDelay: '4s' }}>
-          <Zap className="w-9 h-9 text-yellow-400/25" />
+          <Zap className="w-9 h-9 text-yellow-400/55" />
         </div>
         <div className="absolute floating-icon-1" style={{ animationDelay: '11s' }}>
-          <Zap className="w-7 h-7 text-yellow-400/30" />
+          <Zap className="w-7 h-7 text-yellow-400/60" />
         </div>
         <div className="absolute floating-icon-4" style={{ animationDelay: '18s' }}>
-          <Zap className="w-11 h-11 text-yellow-400/20" />
+          <Zap className="w-11 h-11 text-yellow-400/40" />
         </div>
 
         {/* Express / Globe Icons */}
         <div className="absolute floating-icon-2" style={{ animationDelay: '6s' }}>
-          <Globe className="w-8 h-8 text-indigo-400/25" />
+          <Globe className="w-8 h-8 text-indigo-400/55" />
         </div>
         <div className="absolute floating-icon-6" style={{ animationDelay: '13s' }}>
-          <Globe className="w-10 h-10 text-indigo-400/20" />
+          <Globe className="w-10 h-10 text-indigo-400/40" />
         </div>
         <div className="absolute floating-icon-3" style={{ animationDelay: '19s' }}>
-          <Globe className="w-9 h-9 text-indigo-400/30" />
+          <Globe className="w-9 h-9 text-indigo-400/60" />
         </div>
 
         {/* Database Icons */}
         <div className="absolute floating-icon-4" style={{ animationDelay: '7s' }}>
-          <Database className="w-11 h-11 text-purple-400/25" />
+          <Database className="w-11 h-11 text-purple-400/55" />
         </div>
         <div className="absolute floating-icon-1" style={{ animationDelay: '14s' }}>
-          <Database className="w-8 h-8 text-purple-400/20" />
+          <Database className="w-8 h-8 text-purple-400/40" />
         </div>
         <div className="absolute floating-icon-5" style={{ animationDelay: '20s' }}>
-          <Database className="w-10 h-10 text-purple-400/30" />
+          <Database className="w-10 h-10 text-purple-400/60" />
         </div>
 
         {/* Terminal Icons */}
         <div className="absolute floating-icon-6" style={{ animationDelay: '1s' }}>
-          <Terminal className="w-9 h-9 text-green-400/25" />
+          <Terminal className="w-9 h-9 text-green-400/55" />
         </div>
         <div className="absolute floating-icon-2" style={{ animationDelay: '10s' }}>
-          <Terminal className="w-7 h-7 text-green-400/30" />
+          <Terminal className="w-7 h-7 text-green-400/60" />
         </div>
         <div className="absolute floating-icon-4" style={{ animationDelay: '17s' }}>
-          <Terminal className="w-11 h-11 text-green-400/20" />
+          <Terminal className="w-11 h-11 text-green-400/40" />
         </div>
 
         {/* Cloud Icons */}
         <div className="absolute floating-icon-3" style={{ animationDelay: '21s' }}>
-          <Cloud className="w-10 h-10 text-sky-400/25" />
+          <Cloud className="w-10 h-10 text-sky-400/55" />
         </div>
         <div className="absolute floating-icon-5" style={{ animationDelay: '23s' }}>
-          <Cloud className="w-8 h-8 text-sky-400/20" />
+          <Cloud className="w-8 h-8 text-sky-400/40" />
         </div>
 
         {/* Monitor/CPU Icons */}
         <div className="absolute floating-icon-1" style={{ animationDelay: '22s' }}>
-          <Monitor className="w-9 h-9 text-orange-400/25" />
+          <Monitor className="w-9 h-9 text-orange-400/55" />
         </div>
         <div className="absolute floating-icon-6" style={{ animationDelay: '24s' }}>
-          <Cpu className="w-8 h-8 text-red-400/20" />
+          <Cpu className="w-8 h-8 text-red-400/40" />
         </div>
 
         {/* Settings Icons */}
         <div className="absolute floating-icon-2" style={{ animationDelay: '25s' }}>
-          <Settings className="w-7 h-7 text-gray-400/25" />
+          <Settings className="w-7 h-7 text-gray-400/55" />
         </div>
       </div>
 
